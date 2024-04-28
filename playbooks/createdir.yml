@@ -1,6 +1,7 @@
 ---
 - name: CREATE DIRECTORY & COPY FILES
-  hosts: all
+  hosts: localhost
+  connection:local
   remote_user: utkalreddy
   tasks:
     - name: CREATE DOCKER DIRECTORY
