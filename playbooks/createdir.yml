@@ -6,6 +6,8 @@
   become: yes
   tasks:
     - name: CREATE DOCKER DIRECTORY
+      user: utkalreddy
+      become: yes
       file:
          path: /opt/docker
          state: directory
