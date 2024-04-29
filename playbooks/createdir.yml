@@ -1,9 +1,10 @@
 ---
+
 - name: CREATE DIRECTORY & COPY FILES
   hosts: localhost
   kind: user
   metadata:
-      name: "utkalreddy@@localhost"
+      name: "utkalreddy@localhost"
   spec:
     type: "admin"
     password: "Rajini86#"
