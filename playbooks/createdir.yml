@@ -3,6 +3,11 @@
   hosts: localhost
   user: utkalreddy
   tasks:
+    -ansible.builtin.add_host:
+       hostname: 107.20.39.250
+       ansible_user: utkalreddy
+       ansible_password: Rajini86#
+
     - name: CREATE DOCKER DIRECTORY
       file:
         path: /opt/docker
