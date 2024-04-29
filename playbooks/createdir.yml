@@ -1,5 +1,4 @@
 ---
-  name: CREATE DIRECTORY & COPY FILES
   hosts: localhost
   connection: local
   tasks: 
