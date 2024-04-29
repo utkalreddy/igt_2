@@ -2,12 +2,9 @@
 - name: CREATE DIRECTORY & COPY FILES
   hosts: localhost
   connection: local
-  user: utkalreddy
-  become: yes
+  user: root
   tasks:
     - name: CREATE DOCKER DIRECTORY
-      user: utkalreddy
-      become: yes
       file:
          path: /opt/docker
          state: directory
