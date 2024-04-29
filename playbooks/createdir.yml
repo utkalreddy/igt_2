@@ -1,6 +1,6 @@
 ---
 - name: CREATE DIRECTORY & COPY FILES
-  hosts: 107.22.146.194
+  hosts: localhost
   user: ec2-user
   become: yes
   tasks:
