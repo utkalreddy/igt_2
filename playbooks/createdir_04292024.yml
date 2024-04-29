@@ -1,14 +1,10 @@
 ---
 - name: CREATE DIRECTORY & COPY FILES
   hosts: localhost
-  kind: user
-  metadata:
-      name: "utkalreddy@@localhost"
-   spec:
-    type: "admin"
-    password: "Rajini86#"
-    become : yes
-   tasks:
+  user: utkalreddy
+  password: Rajini86#
+  become: yes
+  tasks:
     - name: CREATE DOCKER DIRECTORY
       file:
          path: /opt/docker
