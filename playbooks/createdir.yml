@@ -1,25 +1,25 @@
 ---
-- name: CREATE DIRECTORY & COPY FILES
-  hosts: localhost
-  kind: user
-  metadata:
+ - name: CREATE DIRECTORY & COPY FILES
+   hosts: localhost
+   kind: user
+   metadata:
       name: "utkalreddy@@localhost"
-  spec:
-    type: "admin"
-    password: "Rajini86#"
-    become : yes
-  tasks:
-    - name: CREATE DOCKER DIRECTORY
-      file:
-         path: /opt/docker
-         state: directory
-         mode: "0755"
-    - name: COPY DOCKERFILE
-      copy:
-         src: ../Dockerfile
-         dest: /opt/docker
-    - name: COPY WAR FILE
-      copy:
-         src: ../webapp/target/webapp.war
-         dest: /opt/docker
+   spec:
+     type: "admin"
+     password: "Rajini86#"
+     become : yes
+   tasks:
+     - name: CREATE DOCKER DIRECTORY
+       file:
+          path: /opt/docker
+          state: directory
+          mode: "0755"
+     - name: COPY DOCKERFILE
+       copy:
+          src: ../Dockerfile
+          dest: /opt/docker
+     - name: COPY WAR FILE
+       copy:
+          src: ../webapp/target/webapp.war
+          dest: /opt/docker
 ...
