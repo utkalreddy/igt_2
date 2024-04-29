@@ -5,9 +5,9 @@
   tasks: 
     - name: CREATE DOCKER DIRECTORY
       file: 
-         path:  '/opt/docker'
+         path: /opt/docker
          state: directory
-         mode:  "0755"
+         mode: "0755"
 
     - name: COPY DOCKERFILE
       copy: 
@@ -18,4 +18,3 @@
       copy: 
          src:  ../webapp/target/webapp.war
          dest:  /opt/docker
----
