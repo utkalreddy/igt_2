@@ -3,20 +3,20 @@
   hosts: localhost
   User: utkalreddy
   connection: local
-    tasks:
+    tasks: 
     - name: CREATE DOCKER DIRECTORY
-      file:
+      file: 
         path: /opt/docker
         state: directory
         mode: "0755"
 
     - name: COPY DOCKERFILE
-      copy:
+      copy: 
         src: ../Dockerfile
         dest: /opt/docker
 
     - name: COPY WAR FILE
-      copy:
+      copy: 
         src: ../webapp/target/webapp.war
         dest: /opt/docker
 
