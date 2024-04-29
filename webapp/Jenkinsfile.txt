@@ -31,7 +31,7 @@ pipeline {
         
         stage('COPY JAR & DOCKERFILE') {
             steps {
-                sh 'sudo ansible-playbook -i 107.22.146.194 -u utkalreddy --ask-become-pass playbooks/createdir.yml'
+                sh 'sudo ansible-playbook -i 107.22.146.194 -u utkalreddy --ask-become-pass -S playbooks/createdir.yml'
             }
         }
         
