@@ -11,7 +11,7 @@
         mode: "0755"
     - name: COPY DOCKERFILE
       copy:
-         src: ../Dockerfile
+         src: https://github.com/utkalreddy/igt_2/tree/master/webapp/dockerfile.txt
          dest: /opt/Docker
     - name: COPY WAR FILE
       copy:
