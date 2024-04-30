@@ -10,15 +10,15 @@
 
     - name: CREATE DOCKER DIRECTORY
       file:
-        path: /opt/docker
+        path: /home/utkalreddy
         state: directory
         mode: "0755"
     - name: COPY DOCKERFILE
       copy:
          src: ../Dockerfile
-         dest: /opt/docker
+         dest: /home/utkalreddy
     - name: COPY WAR FILE
       copy:
          src: ../webapp/target/webapp.war
-         dest: /opt/docker
+         dest: /home/utkalreddy
 ...
