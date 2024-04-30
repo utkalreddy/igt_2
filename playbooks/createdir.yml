@@ -2,7 +2,7 @@
 - name: CREATE DIRECTORY & COPY FILES
   hosts: localhost
   user: utkalreddy
-  become: True
+  become_user: utkalreddy
   tasks:
 
     - name: CREATE DOCKER DIRECTORY
