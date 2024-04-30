@@ -2,7 +2,6 @@
 - name: CREATE DIRECTORY & COPY FILES
   hosts: localhost
   user: utkalreddy
-  password: Rajini86#
   tasks:
 
     - name: CREATE DOCKER DIRECTORY
