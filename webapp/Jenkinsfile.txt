@@ -30,8 +30,7 @@ pipeline {
         
         
         
-        }
-        
+          
         stage('PUSH IMAGE ON DOCKERHUB') {
             environment {
             dockerhub_user = credentials('DOCKERHUB_USER')            
