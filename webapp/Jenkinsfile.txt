@@ -31,7 +31,7 @@ pipeline {
         
         stage('COPY JAR & DOCKERFILE') {
             steps {
-                sh 'sudo ansible-playbook playbooks/createdir.yml --extra-vars "ansible_user=utkalreddy ansible_password=Rajini86#"'
+                sh 'ansible-playbook playbooks/createdir.yml --extra-vars "ansible_user=utkalreddy ansible_password=Rajini86#"'
             }
         }
         
