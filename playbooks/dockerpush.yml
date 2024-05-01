@@ -1,9 +1,10 @@
 ---
 - name: IMAGE PUSH
-  hosts: localhost
+  hosts: local
   user: utkalreddy
-  tasks:
+  tasks:i
     - name: TAG IMAGE WITH BUILD ID & LATEST
+      path: /opt/docker
       shell:
         docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
 
