@@ -2,7 +2,6 @@
 - name: IMAGE PUSH
   hosts: localhost
   user: utkalreddy
-  PATH: /opt/docker
   tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
       shell:
@@ -19,3 +18,4 @@
 
     - name: LOGOUT DOCKERHUB
       shell: docker logout
+...
