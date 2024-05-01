@@ -5,9 +5,9 @@
   tasks:
     
   - name: "TAG IMAGE WITH BUILD ID & LATEST"
-      path: /opt/docker
-      shell:
-        docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
+    path: /opt/docker
+    shell:
+      docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
     
   - name: "LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY"
     shell:        
