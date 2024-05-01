@@ -5,11 +5,11 @@
   become: true
   tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
-      shell: |
-        sudo /opt/docker
-        sudo docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
-        sudo docker tag {{ JOB_NAME }}:v1.{{ BUILD_ID }} utkalreddy/{{ JOB_NAME }}:v1.{{ BUILD_ID }}
-        sudo docker tag {{ JOB_NAME }}:v1.{{ BUILD_ID }} utkalreddy/{{ JOB_NAME }}:latest
+      shell:
+         cd /opt/docker
+         docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
+         docker tag {{ JOB_NAME }}:v1.{{ BUILD_ID }} utkalreddy/{{ JOB_NAME }}:v1.{{ BUILD_ID }}
+         docker tag {{ JOB_NAME }}:v1.{{ BUILD_ID }} utkalreddy/{{ JOB_NAME }}:latest
 
     - name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
       shell: |        
