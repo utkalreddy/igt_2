@@ -5,7 +5,7 @@
   tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
       shell:
-        cd /opt/docker;:
+        cd /opt/docker
         docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
 
     - name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
