@@ -3,6 +3,7 @@
   hosts: local
   user: utkalreddy
   tasks:
+
     - name: TAG IMAGE WITH BUILD ID & LATEST
       path: /opt/docker
       shell:
