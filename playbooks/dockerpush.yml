@@ -2,7 +2,7 @@
 - name: IMAGE PUSH
   hosts: local
   user: utkalreddy
-  tasks:i
+  tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
       path: /opt/docker
       shell:
