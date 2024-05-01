@@ -33,7 +33,7 @@ pipeline {
           
         stage('PUSH IMAGE ON DOCKERHUB') {
             environment {
-            dockerhub_user =  utkalreddy@gmail.com           
+            dockerhub_user =  utkalreddy           
             dockerhub_pass =  Rajini86#
             }    
             steps {
