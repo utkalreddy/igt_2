@@ -1,5 +1,4 @@
 ---
-- name: IMAGE PUSH
   hosts: local
   remote_user: root
   tasks:
@@ -13,7 +12,5 @@
     shell:        
       docker login -u utkalreddy -p 'Rajini86#'
       docker push utkalreddy/igp_2:latest
-
-    name: LOGOUT DOCKERHUB
-    shell: docker logout
+ 
 ...
