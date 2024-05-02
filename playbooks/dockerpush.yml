@@ -1,10 +1,10 @@
 ---
- - name: docker
-   hosts: all
-   connection: local
-   remote_user: utkalreddy
-   become: true
-   path: /opt/docker
+- name: docker
+  hosts: all
+  connection: local
+  remote_user: utkalreddy
+  become: true
+  path: /opt/docker
    tasks:
      - name: TAG IMAGE WITH BUILD ID & LATEST
        shell: 
