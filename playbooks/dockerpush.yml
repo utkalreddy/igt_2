@@ -6,7 +6,7 @@
     
     name: TAG IMAGE WITH BUILD ID & LATEST
     shell:
-      chdir: /opt/docker
+    chdir: /opt/docker
       docker build -t igp_2 .
     
     name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
