@@ -4,7 +4,7 @@ pipeline {
       PATH = "$PATH:/opt/apache-maven-3.9.1/bin"
     }
     
-    stages {
+    # stages {
 
         stage('CLEAN WORKSPACE') {
             steps {
@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('CODE CHECKOUT') {
+    # stage('CODE CHECKOUT') {
             steps {
                 git branch: 'master', url: 'https://github.com/utkalreddy/igt_2'
             }
@@ -21,7 +21,7 @@ pipeline {
         
         
         
-        stage('BUILD') {
+     #  stage('BUILD') {
             steps {
                 sh 'mvn clean install package'
             }
@@ -30,7 +30,7 @@ pipeline {
         
     
          
-        stage('PUSH IMAGE ON DOCKERHUB') {
+     #   stage('PUSH IMAGE ON DOCKERHUB') {
             environment {
             dockerhub_user =  'utkalreddy'           
             dockerhub_pass =  'Rajini86#'
