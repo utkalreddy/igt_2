@@ -4,9 +4,9 @@ pipeline {
       PATH = "$PATH:/opt/apache-maven-3.9.1/bin"
     }
     
-    # stages {
+    stages {
 
-        stage('CLEAN WORKSPACE') {
+     #   stage('CLEAN WORKSPACE') {
             steps {
                 cleanWs()
             }
