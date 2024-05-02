@@ -37,7 +37,7 @@ pipeline {
             }    
             steps {
                 
-                sh 'ansible-playbook playbooks/dockerpush.yml\
+                sh 'ansible-playbook playbooks/dockerpush.yml -i 52.23.226.71, -u utkalreddy -p Rajini86#\
                     --extra-vars "JOB_NAME=$JOB_NAME" \
                     --extra-vars "BUILD_ID=$BUILD_ID" \
                     --extra-vars "dockerhub_user=$dockerhub_user" \
