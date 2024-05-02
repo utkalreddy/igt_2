@@ -1,8 +1,8 @@
 ---
-  name: IMAGE PUSH
-  hosts: local
-  user: utkalreddy
-  tasks:
+ - name: IMAGE PUSH
+   hosts: local
+   remote_user: root
+   tasks:
     
     name: TAG IMAGE WITH BUILD ID & LATEST
     shell:
