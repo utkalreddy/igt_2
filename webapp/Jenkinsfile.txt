@@ -6,45 +6,6 @@ pipeline {
     
     stages {
 
-     #   stage('CLEAN WORKSPACE') {
-            steps {
-                cleanWs()
-            }
-        }
-
-    # stage('CODE CHECKOUT') {
-            steps {
-                git branch: 'master', url: 'https://github.com/utkalreddy/igt_2'
-            }
-        }
-        
-        
-        
-        
-     #  stage('BUILD') {
-            steps {
-                sh 'mvn clean install package'
-            }
-        }
-        
-        
-    
-         
-     #   stage('PUSH IMAGE ON DOCKERHUB') {
-            environment {
-            dockerhub_user =  'utkalreddy'           
-            dockerhub_pass =  'Rajini86#'
-            }    
-            steps {
-                
-                sh 'ansible-playbook playbooks/dockerpush.yml -i 52.23.226.71, --connection=local -u utkalreddy -k -K\
-                    --extra-vars "JOB_NAME=$JOB_NAME" \
-                    --extra-vars "BUILD_ID=$BUILD_ID" \
-                    --extra-vars "dockerhub_user=$dockerhub_user" \
-                    --extra-vars "dockerhub_pass=$dockerhub_pass"'             
-            }
-        }
-        
         stage('DEPLOYMENT ON K8S') {
             steps {
                 sh 'ansible-playbook playbooks/create_pod_on_eks.yml \
