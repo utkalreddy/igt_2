@@ -1,7 +1,7 @@
 ---
 - name: docker
   hosts: all
-  remote_user: root
+  remote_user: utkalreddy
   become: true
   tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
