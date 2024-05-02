@@ -5,15 +5,14 @@
   tasks:
     
   - name: TAG IMAGE WITH BUILD ID & LATEST
-    path: /opt/docker
     shell:
-      docker build -t {{ JOB_NAME }}:v1.{{ BUILD_ID }} .
+      chdir: /opt/docker
+      docker build -t igp_2 .
     
   - name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
     shell:        
       docker login -u utkalreddy -p {{ dockerhub_pass }}
-      docker push utkalreddy/{{ JOB_NAME }}:v1.{{ BUILD_ID }}
-      docker push utkalreddy/{{ JOB_NAME }}:latest
+      docker push utkalreddy/igp_2:latest
 
   - name: REMOVE OLD IMAGES FROM SERVER
     shell: docker rmi -f $(docker images 'utkalreddy:/{{ JOB_NAME }}' -a -q) &> /dev/null
