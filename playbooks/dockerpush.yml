@@ -1,6 +1,7 @@
 ---
 - name: docker
   hosts: all
+  connection: local
   remote_user: utkalreddy
   become: true
   tasks:
