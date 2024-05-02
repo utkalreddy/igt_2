@@ -1,12 +1,14 @@
 ---
 - name: docker
-  hosts: localhost
+  hosts: all
   remote_user: root
+  become: true
   tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
       shell: 
         cd /opt/docker
         docker build -t igp_2 .
+        docker tag igp_2 utkalreddy/igp_2:latest
    
     - name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
       shell:         
