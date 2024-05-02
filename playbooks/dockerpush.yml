@@ -4,10 +4,10 @@
   connection: local
   remote_user: utkalreddy
   become: true
+  path: /opt/docker
   tasks:
     - name: TAG IMAGE WITH BUILD ID & LATEST
       shell: 
-        cd /opt/docker
         docker build -t igp_2 .
         docker tag igp_2 utkalreddy/igp_2:latest
    
