@@ -4,19 +4,19 @@
   user: utkalreddy
   tasks:
     
-  - name: TAG IMAGE WITH BUILD ID & LATEST
+    name: TAG IMAGE WITH BUILD ID & LATEST
     shell:
       chdir: /opt/docker
       docker build -t igp_2 .
     
-  - name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
+    name: LOGIN DOCKERHUB & PUSH IMAGE ON REGISTRY
     shell:        
       docker login -u utkalreddy -p {{ dockerhub_pass }}
       docker push utkalreddy/igp_2:latest
 
-  - name: REMOVE OLD IMAGES FROM SERVER
+    name: REMOVE OLD IMAGES FROM SERVER
     shell: docker rmi -f $(docker images 'utkalreddy:/{{ JOB_NAME }}' -a -q) &> /dev/null
 
-  - name: LOGOUT DOCKERHUB
+    name: LOGOUT DOCKERHUB
     shell: docker logout
 ...
